@@ -1,0 +1,29 @@
+Protege - Version 1.5
+1 1
+A sum C D E F G H I J K L M Num P X Y Z
+arg1 arg2 func A B C I J K
+16
+terminal   0   6 .p.m.mainFlo Start||||||
+terminal   0   0 .p.m.mainFlo End||||||
+terminal   0   4 .p.f.funcFlo Function func(arg1, arg2)||||||
+terminal   0   0 .p.f.funcFlo Return func||||||
+ comment   0  13 .p.m.mainFlo Average of N numbers.||||||
+    read   0  11 .p.m.mainFlo |Num|||||
+     for   0   9 .p.m.mainFlo |I||1|Num|1|
+    next  -7   5 .p.m.mainFlo ||||||
+    read   0  10 .p.m.mainFlo |A|||||
+     set   0   8 .p.m.mainFlo |sum||sum+A|||
+     set   0   7 .p.m.mainFlo |sum||0|||
+  writeD   0   0 .p.m.mainFlo |||B/N|||
+      if  15  16 .p.m.mainFlo ||!=|Num|0||
+    join   0   2 .p.m.mainFlo ||||||
+   write   0  14 .p.m.mainFlo |||sum/Num|||
+   write   0  14 .p.m.mainFlo |||no data|||
+3
+5
+6.5
+1.5
+
+
+
+

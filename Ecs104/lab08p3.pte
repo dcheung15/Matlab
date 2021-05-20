@@ -1,0 +1,36 @@
+Protege - Version 1.5
+1 1
+A B C D E F G H I J K L M REAL IMAG X X1 X2
+arg1 arg2 func A B C I J K
+27
+terminal   0   5 .p.m.mainFlo Start||||||
+terminal   0   0 .p.m.mainFlo End||||||
+terminal   0   4 .p.f.funcFlo Function func(arg1, arg2)||||||
+terminal   0   0 .p.f.funcFlo Return func||||||
+ comment   0   6 .p.m.mainFlo Roots of quadratic equation.||||||
+    read   0   7 .p.m.mainFlo |A|||||
+    read   0   8 .p.m.mainFlo |B|||||
+    read   0  12 .p.m.mainFlo |C|||||
+    setD   0   0 .p.m.mainFlo |A||2|||
+    setD   0   0 .p.m.mainFlo |B||-9|||
+    setD   0   0 .p.m.mainFlo |C||-35|||
+     set   0  13 .p.m.mainFlo |D||B*B -4*A*C|||
+      if  15  16 .p.m.mainFlo ||>=|D|0||
+    join   0   2 .p.m.mainFlo ||||||
+   write   0  17 .p.m.mainFlo |||'two reals|||
+   write   0  21 .p.m.mainFlo |||'couples|||
+     set   0  18 .p.m.mainFlo |X(1)||(-B+sqrt(D))/(2*A)|||
+     set   0  19 .p.m.mainFlo |X(2)||(-B-sqrt(D))/(2*A)|||
+   write   0  20 .p.m.mainFlo |||X(1)|||
+   write   0  14 .p.m.mainFlo |||X(2)|||
+     set   0  22 .p.m.mainFlo |REAL||-B/(2.0*A)|||
+     set   0  23 .p.m.mainFlo |IMAG||sqrt(-D)/(2*A)|||
+   write   0  24 .p.m.mainFlo |||REAL|||
+   write   0  14 .p.m.mainFlo |||IMAG|||
+    setD   0   0 .p.m.mainFlo |A||2|||
+    setD   0   0 .p.m.mainFlo |B||-9|||
+    setD   0   0 .p.m.mainFlo |C||-35|||
+2
+-9
+-35
+

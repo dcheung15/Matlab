@@ -1,0 +1,31 @@
+Protege - Version 1.5
+1 1
+A B C D E F G H I J K L M N P X Y Z
+arg1 arg2 func A B C I J K
+19
+terminal   0   5 .p.m.mainFlo Start||||||
+terminal   0   0 .p.m.mainFlo End||||||
+terminal   0   4 .p.f.funcFlo Function func(arg1, arg2)||||||
+terminal   0   0 .p.f.funcFlo Return func||||||
+    read   0   6 .p.m.mainFlo |A|||||
+    read   0   7 .p.m.mainFlo |B|||||
+    read   0   8 .p.m.mainFlo |C|||||
+    read   0  18 .p.m.mainFlo |D|||||
+    setD   0   0 .p.m.mainFlo |A||0|||
+  writeD   0   0 .p.m.mainFlo |||A|||
+    forD   0   0 .p.m.mainFlo |I||1|2|1|
+   nextD   0   0 .p.m.mainFlo ||||||
+   while   0  15 .p.m.mainFlo ||>=|A|90||
+    wend -13   2 .p.m.mainFlo ||||||
+     set   0  14 .p.m.mainFlo |E||A+B+C+D/E|||
+   callD   0   0 .p.m.mainFlo |A||B|C||
+    setD   0   0 .p.m.mainFlo |E||A+B+C+D/4|||
+    read   0  19 .p.m.mainFlo |E|||||
+     set   0  13 .p.m.mainFlo |E||4|||
+95
+80
+30
+92
+-10
+
+
